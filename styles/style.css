@@ -1,0 +1,387 @@
+/* ------------  common css styles  ------------ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    /* height: 100vh;  */
+    background-image: url('../images/cloud.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 30px;
+}
+
+.highlight {
+    color: #ff008e;
+}
+
+/* --------------- button css ------------- */
+.primary-button {
+    outline: 0;
+    border: 0;
+    padding: 15px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, #c21273, #ff008e);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 7px 0px #a5075e;
+    border-radius: 5px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    transition: .2s ease-out;
+}
+
+.primary-button:active {
+    top: 5px;
+    box-shadow: 0px 2px 0px #a5075e;
+}
+
+/* ------------- button css ------------- */
+.section-title {
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: inline-block;
+    margin: 50px 5px 40px 10px;
+    border-bottom: 3px solid #ff008e;
+}
+
+/* ---------- nav toggler -------- */
+#nav-toggler {
+    display: none;
+}
+
+.nav-toggler-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* ------------  common css Styles ------------- */
+/* ------------- nabar section Style   -------------- */
+nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation li {
+    list-style-type: none;
+    margin: 10px;
+}
+
+.navigation li a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+.navigation li a:hover {
+    color: #ff008e;
+}
+
+/* ------------- banner section style ------------ */
+.banner {
+    height: calc(100vh - 80px);
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.banner-left h1 {
+    font-size: 45px;
+    color: #fff;
+}
+
+.banner-left p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 15px 0px;
+}
+
+.banner-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.banner-right img {
+    width: 100%;
+}
+
+/* --------------- feature section style -------------- */
+.feature {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+    gap: 3rem;
+    background-image: url('../images/featurebg.jpg');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position-y: center;
+}
+
+.card:nth-child(odd) {
+    text-align: right;
+}
+
+.card {
+    padding: 30px;
+    box-shadow: 0px 30px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card .fa-solid {
+    font-size: 30px;
+    padding: 10px;
+    color: #fff;
+    background-color: #ff008e;
+    border-radius: 50%;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #ff008e;
+}
+
+.card p {
+    margin: 10px 0px;
+    line-height: 1.5;
+}
+
+.card a {
+    text-decoration: none;
+    color: #ff008e;
+}
+
+/* ---------------- about section style ------------ */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.about-left {
+    text-align: center;
+}
+
+.about-left img {
+    width: 90%;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-right h2 {
+    font-size: 35px;
+    color: #ff008e;
+}
+
+.about-right p {
+    line-height: 1.5;
+    margin: 15px 0px;
+}
+
+/* ----------- gallery section style ------------ */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    place-items: center;
+}
+
+.photo {
+    width: 300px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+    border: 3px solid #ff008e;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .8s ease-in-out;
+    z-index: 1;
+}
+
+.photo::after {
+    content: ' ';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 2;
+    transition: .3s ease-out;
+}
+
+.photo:hover.photo::after {
+    opacity: 1;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+/* ----------- contact section style ------------ */
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.contact-left img {
+    width: 100%;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-field {
+    outline: 0;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px 0px;
+    font-family: inherit;
+    border: 1px solid #ff008e;
+}
+
+/* -------------- footer section style ---------- */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #fff;
+    background-color: #03203C;
+    margin-top: 50px;
+}
+
+/* ----------- Responsive css ------------ */
+@media only screen and (max-width: 988px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-left h1 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .feature {
+        background-image: unset;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .banner {
+        grid-template-columns: repeat(1, 1fr);
+        height: fit-content;
+    }
+
+    .banner-left {
+        order: 2;
+        padding: 50px 0px;
+    }
+
+    .about,
+    .gallery,
+    .contact {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature {
+        grid-template-columns: 400px;
+    }
+
+    .photo {
+        text-align: center;
+    }
+
+    .gallery .photo img {
+        max-width: 300px;
+    }
+
+    .nav-toggler-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navigation {
+        position: absolute;
+        left: 0px;
+        top: 80px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px 0px;
+        transform: translateY(-600px);
+        transition: .5s ease-out;
+    }
+
+    .navigation li a {
+        color: #121212;
+        padding: 0px;
+    }
+
+    #nav-toggler:checked~.navigation {
+        transform: translate(0px);
+    }
+}
